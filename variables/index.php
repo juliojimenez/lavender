@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Demo</title>
+    <title>Variables</title>
 </head>
 
 <body>
@@ -18,6 +18,7 @@
         $name = "World";
         echo "$greeting $name!";
         ?>
+    </h2>
 </body>
 
 </html>
