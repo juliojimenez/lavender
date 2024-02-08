@@ -1,35 +1,30 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <title>Conditionals and Booleans</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: grid;
-            place-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-    </style>
-</head>
-
-<body>
-    <?php
-    $name = "Dark Matter";
-    $read = true;
-
-    if ($read) {
-        $message = "You have read \"$name\"";
-    } else {
-        $message = "You haven't read \"$name\"";
-    }
-    ?>
-
-    <h1>
-        <?= $message ?>
-    </h1>
-</body>
-
+    <head>
+        <meta charset="utf-8" />
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h1>Recommended Books</h1>
+        <?php
+            $books = [
+                "Do Androids Dream of Electric Sheep?",
+                "The Langoliers",
+                "Hail Mary"
+            ];
+        ?>
+        <ul>
+            <?php 
+                foreach ($books as $book) {
+                    echo "<li>{$book}™</li>";
+                }
+            ?>
+        </ul>
+        <h1>Recommended Books (shorthand)</h1>
+        <ul>
+            <?php foreach ($books as $book) : ?>
+                <li><?= $book ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </body>
 </html>
